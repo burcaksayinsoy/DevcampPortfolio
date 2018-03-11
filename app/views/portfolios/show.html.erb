@@ -1,0 +1,8 @@
+<%= image_tag @portfolio_item.main_image unless @portfolio_item.main_image.nil? %>
+
+<h2><%= @portfolio_item.title  %></h2>
+<em><%= @portfolio_item.subtitle %></em>
+<p><%= @portfolio_item.body %></p>
+
+<br>
+<%= link_to "Edit", edit_portfolio_path(@portfolio_item)  %>
