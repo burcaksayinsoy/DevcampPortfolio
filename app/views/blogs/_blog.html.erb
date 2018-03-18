@@ -1,0 +1,9 @@
+<div>
+  <p><%= blog.title %></p>
+  <p>Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</p>
+  <p><%= blog.body %></p>
+  <p><%= link_to blog.status, toggle_status_blog_path(blog) %></p>
+  <p><%= link_to 'Show', blog %></p>
+  <p><%= link_to 'Edit', edit_blog_path(blog) %></p>
+  <p><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+</div>
